@@ -20,16 +20,16 @@ body {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    width: 200px;
+    width: 240px;
     z-index: 5;
 }
 
 .left-sidebar {
-    left: 20px;
+    left: 10px;
 }
 
 .right-sidebar {
-    right: 20px;
+    right: 10px;
 }
 
 .kuromi-frame {
@@ -273,14 +273,15 @@ body {
     transition: background 0.3s ease;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE MEJORADO ===== */
 @media (max-width: 1100px) {
     .kuromi-sidebar {
         position: static;
         transform: none;
         width: 100%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         margin: 20px 0;
     }
     
@@ -288,23 +289,83 @@ body {
         position: static;
         left: auto;
         right: auto;
+        margin: 15px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
     
     .kuromi-frame {
         width: 200px;
         height: 250px;
-        margin: 0 15px;
+        margin: 0;
     }
     
     .container {
         margin-top: 20px;
+        order: 3; /* Poner el contenedor después de las imágenes */
+    }
+    
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .envelope-wrapper {
+        width: 350px;
+        height: 600px;
+    }
+    
+    .envelope {
+        width: 350px;
+        height: 220px;
+    }
+    
+    .flap {
+        border-left: 175px solid transparent;
+        border-right: 175px solid transparent;
+        border-top: 100px solid #ff99cc;
+    }
+    
+    .body {
+        width: 350px;
+        height: 220px;
+    }
+    
+    .body::before {
+        border-left: 175px solid #ffb3d9;
+        border-top: 110px solid transparent;
+    }
+    
+    .body::after {
+        border-right: 175px solid #ffb3d9;
+        border-top: 110px solid transparent;
+    }
+    
+    .letter {
+        width: 320px;
+        padding: 25px;
+        bottom: 200px;
+        max-height: 450px;
+    }
+    
+    .title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .kuromi-frame {
+        width: 180px;
+        height: 230px;
     }
 }
 
 @media (max-width: 500px) {
     .envelope-wrapper {
         width: 300px;
-        height: 600px;
+        height: 550px;
     }
     
     .envelope {
@@ -336,12 +397,13 @@ body {
     .letter {
         width: 280px;
         padding: 20px;
-        bottom: 220px;
+        bottom: 180px;
         max-height: 420px;
     }
     
     .title {
         font-size: 1.8rem;
+        margin-bottom: 25px;
     }
 
     .heart {
@@ -349,8 +411,53 @@ body {
     }
     
     .kuromi-frame {
-        width: 180px;
-        height: 220px;
-        margin: 0 10px;
+        width: 160px;
+        height: 210px;
+    }
+    
+    .instructions {
+        padding: 15px;
+        margin-top: 20px;
+    }
+    
+    .instructions p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 360px) {
+    .envelope-wrapper {
+        width: 280px;
+    }
+    
+    .envelope {
+        width: 280px;
+    }
+    
+    .flap {
+        border-left: 140px solid transparent;
+        border-right: 140px solid transparent;
+    }
+    
+    .body {
+        width: 280px;
+    }
+    
+    .body::before {
+        border-left: 140px solid #ffb3d9;
+    }
+    
+    .body::after {
+        border-right: 140px solid #ffb3d9;
+    }
+    
+    .letter {
+        width: 260px;
+    }
+    
+    .kuromi-frame {
+        width: 150px;
+        height: 200px;
     }
 }
