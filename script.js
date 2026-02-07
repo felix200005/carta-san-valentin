@@ -48,3 +48,4 @@ console.log('💌 ¡Proyecto cargado correctamente!');
 console.log('🎯 Haz click en el sobre para abrir la carta');
 console.log('🎯 Haz click en la carta para cerrarla');
 console.log('🎯 O haz click en el sobre nuevamente para cerrar');
+console.log('🖼️ Imágenes de Kuromi cargadas 💜');
