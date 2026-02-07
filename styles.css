@@ -291,8 +291,8 @@ body {
     }
     
     .kuromi-frame {
-        width: 160px;
-        height: 200px;
+        width: 200px;
+        height: 250px;
         margin: 0 15px;
     }
     
@@ -349,8 +349,8 @@ body {
     }
     
     .kuromi-frame {
-        width: 140px;
-        height: 180px;
+        width: 180px;
+        height: 220px;
         margin: 0 10px;
     }
 }
