@@ -60,6 +60,11 @@ body {
     display: none;
 }
 
+/* ===== SEGUNDA IMAGEN PARA MÓVIL ===== */
+.mobile-kuromi-second {
+    display: none;
+}
+
 /* ===== CONTENEDOR PRINCIPAL ===== */
 .container {
     text-align: center;
@@ -295,6 +300,14 @@ body {
         width: 100%;
     }
     
+    /* Mostrar segunda imagen para móvil */
+    .mobile-kuromi-second {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
     .mobile-kuromi .kuromi-frame {
         width: 180px;
         height: 230px;
